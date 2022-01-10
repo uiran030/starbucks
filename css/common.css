@@ -1,0 +1,23 @@
+
+*{margin:0; padding:0; box-sizing: border-box;}
+ul{list-style: none;}
+.row { width:700px; margin:0 auto;}
+.cf::after{
+    content: '';
+    clear: both;
+    display: block;
+}
+img{
+    max-width:100%;
+    vertical-align: middle;
+}
+a{color:inherit; text-decoration: none;}
+.blind{
+    position:absolute;
+    width:1px;
+    height: 1px;
+    overflow: hidden;
+    text-indent: -9999px;
+    font-size: 0px;
+    line-height: 0px;
+}

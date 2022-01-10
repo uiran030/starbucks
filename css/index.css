@@ -1,34 +1,13 @@
 @charset "utf-8";
 
-*{margin:0; padding:0; box-sizing: border-box;}
-ul{list-style: none;}
-.cf::after{
-    content: '';
-    clear: both;
-    display: block;
-}
-img{
-    max-width:100%;
-    vertical-align: middle;
-}
-a{color:inherit; text-decoration: none;}
-.blind{
-    position:absolute;
-    width:1px;
-    height: 1px;
-    overflow: hidden;
-    text-indent: -9999px;
-    font-size: 0px;
-    line-height: 0px;
-}
-
 
 /* 헤더작업 */
-#header{
+
     /* 
         position:fixed or position:absolute를 사용하면
         블럭요소의 기본값인 width:100%가 사라짐. (다시 적용시켜줘야함)
     */
+#header{
     position:fixed;
     top:0; left:0;
     width:100%;
@@ -305,16 +284,20 @@ a{color:inherit; text-decoration: none;}
 }
 #container .company-info .depth1 > li > a::after{
     content: '\f078';
+    /* content: '\f077'; */
     font-family: 'Font Awesome 5 Free';
     font-weight: 900;
     position:absolute;
     top:50%; right:15.5px;
     margin-top:-9.5px;
-    transition:all 0.5s;
+    /* transition:all 0.5s; */
 }
-#container .company-info .depth1 > li > a:hover::after{
+#container .company-info .depth1 > li.on > a::after{
+    content: '\f077';
+}
+/* #container .company-info .depth1 > li > a:hover::after{
     transform: rotate(-180deg);
-}
+}  */
 #container .company-info .depth1 > li > a::before{
     content: '';
     position:absolute;
@@ -324,15 +307,13 @@ a{color:inherit; text-decoration: none;}
     height: 50px;
     border-radius: 50%;
     transition: all 0.5s;
-    transform: scale(1);
 }
 #container .company-info .depth1 > li > a:hover::before{
     background: #ddd;
-    transform: scale(2);
 }
-#container .company-info .depth2{
-    display: none; 
-}
+#container .company-info .depth2{display: none;}
+/* #container .company-info .depth1 > li.on .depth2{display: block;} */
+
 #container .company-info .depth2 > li{
     margin-bottom: 8px;
 }

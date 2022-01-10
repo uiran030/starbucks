@@ -1,0 +1,116 @@
+
+/* 헤더 부분 */
+#header{
+    position:relative;
+    top:0; left:0;
+    width:100%;
+    background: #fff;
+    z-index: 2;
+    padding:0 40px;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.3);
+}
+#header > h1 {
+    float: left; 
+    width:50px;
+    margin-right:40px;
+    margin-top:20px;
+}
+#header > #nav {
+    float: right;
+    width:calc(100% - 90px);
+    position:relative;
+}
+#header > #nav > .depth1 > li {
+    display: inline-block;
+}
+#header > #nav > .depth1 > li > a{
+    display: inline-block;
+    padding:40px 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+#header > #nav > .depth1 > li+li > a {
+    padding-left: 24px;
+}
+#header > #nav > .membership{
+    position:absolute;
+    top:50%; right:0;
+    margin-top:-17px;
+}
+#header > #nav > .membership > a{
+    font-size: 14px;
+    padding:6px 16px 8px;   
+    border:1px solid black;
+    border-radius: 50px;
+    font-weight: bold;
+}
+#header > #nav > .membership > a:first-child{
+    margin-right:40px;
+    border:none;
+    padding:7px 0px;
+}
+#header > #nav > .membership > a:first-child:hover{
+    color:#00754a;
+}
+#header > #nav > .membership > a:nth-child(2){
+    margin-right:16px;
+    transition:all 0.5s;
+}
+#header > #nav > .membership > a:nth-child(2):hover{
+    background: rgba(0,0,0,0.06);
+}
+#header > #nav > .membership > a:last-child{
+    background: black;
+    color:white;
+    transition: all 0.5s;
+}
+#header > #nav > .membership > a:nth-child(3):hover{
+    background:rgba(0,0,0,0.7);
+}
+
+
+/* 메인 */
+#section legend {display: none;}
+#section fieldset { border: none;}
+#section h2 {text-align: center; margin:50px;}
+#section .border1, #section .border2 , #section .border3{
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+    padding:30px;
+    margin-bottom: 50px;
+}
+#section img {display: block; margin:0 auto 30px;}
+
+#joinForm tr {width:500px;}
+#joinForm th {width:120px; height: 40px;}
+#section .border1 td input, #section .border2 #irum { width:400px;}
+#section .border2 #birthyear {width:20%;}
+#section .border2 #birthmonth, #section .border2 #birthday {width:15%;}
+.border2 #hp1, .border2 #hp2 {width:20%;}
+.border2 #email, .border2 #email2 {width:30%;}
+.border2 .font12 {font-size: 12px; color:#aaa}
+
+
+#section .border3 .agree {padding:15px;}
+#section .border3 .agree p {margin:0 0 15px;}
+#section .border3 .agree span {font-weight: bold; font-size: 18px;}
+#section .border3 .agree .info {
+    padding:20px;
+    height:150px;
+    overflow-y: auto;
+    border:1px solid rgb(199, 199, 199);
+    background-color: rgb(241, 241, 241);
+}
+
+
+.btn > p {text-align: center; margin-top:30px; font-weight: bold; font-size: 14px;}
+.btn button{ 
+    margin: 20px 50px;
+    padding:20px;
+    background:#007042;
+    border:none;
+    width:600px; 
+    color:white; 
+    font-size: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+}
