@@ -16,21 +16,24 @@
     padding:0 40px;
     box-shadow: 0 1px 3px 0 rgba(0,0,0,0.3);
     /* 실무에서는 shadow로 선처럼 보이게 처리하는 경우가 많음 */
+    display: flex;
+    align-items: center;
 }
 #header > h1 {
-    float: left; 
     width:50px;
     margin-right:40px;
-    margin-top:20px;
 }
 #header > #nav {
-    float: right;
-    width:calc(100% - 90px); 
+    position:relative;
+    /* width:calc(100% - 90px);  */
     /* 
     clac를 이용하여 로고 크기범위말고 전부를 네비게이션이 차지하도록 함
     (꼭 빼기 사이에는 띄어쓰기 해줘야함)
     */
-    position:relative;
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 #header > #nav > .depth1 > li {
     display: inline-block;
@@ -44,11 +47,7 @@
 #header > #nav > .depth1 > li+li > a {
     padding-left: 24px;
 }
-#header > #nav > .membership{
-    position:absolute;
-    top:50%; right:0;
-    margin-top:-17px;
-}
+#header > #nav > .membership{ margin-top:-5px; }
 #header > #nav > .membership > a{
     font-size: 14px;
     padding:6px 16px 8px;   
@@ -111,18 +110,19 @@
     background: #fff;
     box-shadow: 0 1px 1px rgba(0,0,0,.24),
     0 4px 4px rgba(0,0,0,.12);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #main > .welcome-msg > .text{
-    padding:0 131px;
     font-size: 28px;
     font-weight: bold;
-    padding-top:40vh;
+    transform: translateY(-98px);
 }
 /* 메인부분 우측 1번 작업 */
 #main > #container{
     width:60%;
     margin-left: 40%;
-    height: 3000px;
     padding:20px 0;
 }
 #container > .rewards {
@@ -132,24 +132,15 @@
     font-size: 14px;
     margin-bottom: 20px;
 }
-#container .rewards ul{overflow: hidden;}
-#container .rewards li {
-    float: left;
-    width:32.3333%;
-}
-#container .rewards li:nth-child(2){
-    margin:0 1.5%;
-}
-#container .rewards li img{
-    border-radius: 15px;
-}
+#container .rewards ul{ display: flex; } 
+#container .rewards li { flex:1; }
+#container .rewards li:nth-child(2){ margin:0 20px; }
+#container .rewards li img{ border-radius: 15px; }
 #container .rewards li p{
     font-size:19px;
     padding-top:24px;
 }
-#container .btn{
-    padding:24px 0;
-}
+#container .btn{ padding:24px 0; }
 #container .btn a {
     font-size: 14px;
     padding:6px 16px 8px;   
@@ -213,12 +204,8 @@
     line-height: 1.5em;
     overflow: hidden;
 }
-#container .order .order1 > div:nth-child(3) a:first-child{
-    margin-bottom: 20px;
-}
-#container .order .order1 > div:nth-child(3) a strong{
-    display: block;
-}
+#container .order .order1 > div:nth-child(3) a:first-child{ margin-bottom: 20px; }
+#container .order .order1 > div:nth-child(3) a strong{ display: block; }
 /* #container .order .order1 > div:nth-child(3) a img{
     position:absolute;
     bottom:-10px;
