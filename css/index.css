@@ -1,85 +1,5 @@
 @charset "utf-8";
 
-
-/* 헤더작업 */
-
-    /* 
-        position:fixed or position:absolute를 사용하면
-        블럭요소의 기본값인 width:100%가 사라짐. (다시 적용시켜줘야함)
-    */
-#header{
-    position:fixed;
-    top:0; left:0;
-    width:100%;
-    background: #fff;
-    z-index: 2;
-    padding:0 40px;
-    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.3);
-    /* 실무에서는 shadow로 선처럼 보이게 처리하는 경우가 많음 */
-    display: flex;
-    align-items: center;
-}
-#header > h1 {
-    width:50px;
-    margin-right:40px;
-}
-#header > #nav {
-    position:relative;
-    /* width:calc(100% - 90px);  */
-    /* 
-    clac를 이용하여 로고 크기범위말고 전부를 네비게이션이 차지하도록 함
-    (꼭 빼기 사이에는 띄어쓰기 해줘야함)
-    */
-    flex: 1;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-#header > #nav > .depth1 > li {
-    display: inline-block;
-}
-#header > #nav > .depth1 > li > a{
-    display: inline-block;
-    padding:40px 0;
-    font-size: 14px;
-    font-weight: bold;
-}
-#header > #nav > .depth1 > li+li > a {
-    padding-left: 24px;
-}
-#header > #nav > .membership{ margin-top:-5px; }
-#header > #nav > .membership > a{
-    font-size: 14px;
-    padding:6px 16px 8px;   
-    border:1px solid black;
-    border-radius: 50px;
-    font-weight: bold;
-}
-#header > #nav > .membership > a:first-child{
-    margin-right:40px;
-    border:none;
-    padding:7px 0px;
-}
-#header > #nav > .membership > a:first-child:hover{
-    color:#00754a;
-}
-#header > #nav > .membership > a:nth-child(2){
-    margin-right:16px;
-    transition:all 0.5s;
-}
-#header > #nav > .membership > a:nth-child(2):hover{
-    background: rgba(0,0,0,0.06);
-}
-#header > #nav > .membership > a:last-child{
-    background: black;
-    color:white;
-    transition: all 0.5s;
-}
-#header > #nav > .membership > a:nth-child(3):hover{
-    background:rgba(0,0,0,0.7);
-}
-
-
 /* 메인부분 좌측 작업 */
 #main{
     overflow: hidden;
@@ -206,18 +126,6 @@
 }
 #container .order .order1 > div:nth-child(3) a:first-child{ margin-bottom: 20px; }
 #container .order .order1 > div:nth-child(3) a strong{ display: block; }
-/* #container .order .order1 > div:nth-child(3) a img{
-    position:absolute;
-    bottom:-10px;
-}
-#container .order .order1 > div:nth-child(3) a:first-child img{
-    width:63px;
-    right:20px;
-}
-#container .order .order1 > div:nth-child(3) a:last-child img{
-    width:85px;
-    right:-5px;
-} */
 #container .order .order1 > div:nth-child(3) a:first-child{
     margin-bottom: 20px;
     background: #d4e9e2 url(../imges/iced_drink.webp) no-repeat 95% 40px;
@@ -282,9 +190,6 @@
 #container .company-info .depth1 > li.on > a::after{
     content: '\f077';
 }
-/* #container .company-info .depth1 > li > a:hover::after{
-    transform: rotate(-180deg);
-}  */
 #container .company-info .depth1 > li > a::before{
     content: '';
     position:absolute;
@@ -299,7 +204,6 @@
     background: #ddd;
 }
 #container .company-info .depth2{display: none;}
-/* #container .company-info .depth1 > li.on .depth2{display: block;} */
 
 #container .company-info .depth2 > li{
     margin-bottom: 8px;
@@ -316,11 +220,11 @@
 #container .footer{
     padding:0 40px 100px;
 }
-#container .footer .sns a{
+#container .footer .sns > a{
     display: inline-block;
     width:32px;
     height: 32px;
-    line-height: 30px;
+    line-height: 32px;
     border-radius: 50%;
     background: #000;
     color:#fff;
@@ -331,13 +235,10 @@
     position:relative;
     margin-top:10px;
 }
+#container .footer .sns > a i {line-height: 32px;}
 #container .footer .sns a::after{
     content: '';
     position:absolute;
-    /* margin-top:-24px;
-    margin-left: -24px; */
-    /* width:48px;
-    height: 48px; */
     border-radius: 50%;
     background: #ddd;
     top:50%; left: 50%; right: 50%; bottom: 50%;
