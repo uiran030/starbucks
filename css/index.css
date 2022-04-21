@@ -5,7 +5,19 @@
     overflow: hidden;
     padding-top:100px;
 }
-#main .startorder {
+#main .startorder > button {
+    position:fixed;
+    bottom:130px;
+    right:113px;
+    color:#00a862;
+    font-size: 45px;
+    border:none;
+    background-color: inherit;
+    cursor: pointer;
+    display: none;
+}
+#main .startorder > button.on{display: block;}
+#main .startorder > a{
     position:fixed;
     bottom:50px;
     right: 50px;
@@ -250,14 +262,6 @@
     left:-8px;
     right:-8px;
     bottom: -8px;
-}
-#container .footer .sns a:first-child{
-    width:32px;
-    height: 32px;
-    background: #fff;
-    color:#000;
-    font-size:33px;
-    text-align: center;
 }
 #container .footer .sns a+a{
     margin-left: 15px;
