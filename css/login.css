@@ -37,6 +37,10 @@
     font-size: 25px; 
     color:gainsboro; 
     margin: 5px 5px 20px 0;
+    cursor: pointer;
+}
+#main .center .centerbox .remember i.on{
+    color:rgb(0,102,51);
 }
 #main .center .centerbox button {
     display: block;
@@ -49,6 +53,7 @@
     border:none;
     font-weight: bold;
     border-radius: 5px;
+    cursor: pointer;
 }
 #main .center .centerbox .ptag {
     color:green;
